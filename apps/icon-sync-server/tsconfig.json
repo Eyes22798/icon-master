@@ -1,0 +1,9 @@
+{
+  "extends": "tsconfig/icon-sync-server.json",
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
