@@ -1,5 +1,5 @@
 {
-  "name": "jestconfig",
+  "name": "@helox/icon-sync-vscode-plugin",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
