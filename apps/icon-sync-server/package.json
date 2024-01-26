@@ -1,17 +1,17 @@
 {
-  "name": "web",
-  "version": "1.0.0",
+  "name": "@helox/icon-sync-server",
   "private": true,
+  "type": "module",
   "scripts": {
-    "lint": "eslint",
-    "test": "jest --passWithNoTests --no-cache --runInBand --silent --noStackTrace",
-    "test:unit": "pnpm test -- --watch -c jest-unit-config.js",
-    "test:integration": "pnpm test -- --watch -c jest-integration-config.js",
-    "test:verbose": "jest --passWithNoTests --no-cache --runInBand",
-    "test:staged": "pnpm test --findRelatedTests",
-    "test:ci": "jest --passWithNoTests --coverage"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "jest-environment-jsdom": "^29.6.2"
+    "nuxt": "^3.9.3",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
   }
 }

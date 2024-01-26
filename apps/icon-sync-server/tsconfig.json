@@ -1,9 +1,4 @@
 {
-  "extends": "tsconfig/icon-sync-server.json",
-  "include": [
-    "**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json"
 }
