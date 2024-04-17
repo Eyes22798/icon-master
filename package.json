@@ -1,8 +1,12 @@
 {
   "name": "@helox/icon-master",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "index.js",
+  "private": false,
+  "files": [
+    "./build/.temp"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
@@ -42,7 +46,7 @@
   "standard-version": {
     "scripts": {
       "prerelease": "echo buliding...",
-      "posttag": "git push --follow-tags origin main && npm publish"
+      "posttag": "git push --follow-tags origin main && npm publish --access=public"
     },
     "types": [
       {
