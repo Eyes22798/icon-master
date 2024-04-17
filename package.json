@@ -6,7 +6,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release:major": "standard-version --release-as major && git push --follow-tags origin main && npm publish",
+    "release:minor": "standard-version --release-as minor && git push --follow-tags origin main && npm publish",
+    "release:patch": "standard-version --release-as patch && git push --follow-tags origin main && npm publish",
+    "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin main && npm publish",
+    "release:beta": "standard-version --prerelease beta && git push --follow-tags origin main && npm publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.2.1",
@@ -14,7 +19,8 @@
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.2"
+    "lint-staged": "^15.2.2",
+    "standard-version": "^9.5.0"
   },
   "packageManager": "pnpm@8.6.10",
   "keywords": [],
@@ -33,5 +39,10 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "standard-version": {
+    "scripts": {
+      "postbump": "pnpm build"
+    }
   }
 }
