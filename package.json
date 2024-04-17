@@ -1,17 +1,17 @@
 {
   "name": "@helox/icon-master",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "private": false,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
-    "release:major": "standard-version --release-as major && git push --follow-tags origin main && npm publish",
-    "release:minor": "standard-version --release-as minor && git push --follow-tags origin main && npm publish",
-    "release:patch": "standard-version --release-as patch && git push --follow-tags origin main && npm publish",
-    "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin main && npm publish",
-    "release:beta": "standard-version --prerelease beta && git push --follow-tags origin main && npm publish"
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:alpha": "standard-version --prerelease alpha",
+    "release:beta": "standard-version --prerelease beta"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.2.1",
@@ -42,7 +42,15 @@
   },
   "standard-version": {
     "scripts": {
-      "postbump": "pnpm build"
-    }
+      "prerelease": "echo buliding...",
+      "posttag": "git push --follow-tags origin main && npm publish"
+    },
+    "types": [
+      {
+        "type": "chore",
+        "section": "Other",
+        "hidden": false
+      }
+    ]
   }
 }
