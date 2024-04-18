@@ -1,0 +1,40 @@
+{
+	"files.eol": "\n",
+	"eslint.format.enable": true,
+	"editor.codeLens": true,
+	"editor.tabSize": 2,
+	"editor.detectIndentation": false,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"javascript.format.enable": false,
+	"typescript.format.enable": false,
+	"editor.formatOnSave": true,
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features",
+		"editor.formatOnSave": true
+	},
+	"[vue]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"stylelint.validate": ["css", "less", "postcss", "scss", "sass", "vue"],
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "always",
+		"source.fixAll.stylelint": "always"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": null,
+		"editor.formatOnSave": false
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint"
+	}
+}
