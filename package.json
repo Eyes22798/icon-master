@@ -2,7 +2,6 @@
 	"name": "@heloxmo/icon-master",
 	"version": "0.0.6",
 	"description": "",
-	"main": "index.js",
 	"private": true,
 	"files": [
 		"./build/.temp"
