@@ -8,6 +8,14 @@
 	"javascript.format.enable": false,
 	"typescript.format.enable": false,
 	"editor.formatOnSave": true,
+	"eslint.workingDirectories": [
+		{
+			"pattern": "./apps/*/"
+		},
+		{
+			"pattern": "./packages/*/"
+		}
+	],
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features",
 		"editor.formatOnSave": true
