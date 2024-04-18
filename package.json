@@ -1,5 +1,5 @@
 {
-  "name": "@helox/icon-master",
+  "name": "@heloxmo/icon-master",
   "version": "0.0.6",
   "description": "",
   "main": "index.js",
@@ -10,26 +10,31 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "pnpm -r --filter=./packages/* run build",
+    "prettier": "prettier --check ./",
+    "prettier:fix": "prettier --write ./",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "pnpm run lint --fix",
     "prepare": "husky",
-    "release:major": "standard-version --release-as major",
-    "release:minor": "standard-version --release-as minor",
-    "release:patch": "standard-version --release-as patch",
-    "release:alpha": "standard-version --prerelease alpha",
-    "release:beta": "standard-version --prerelease beta"
+    "publish": "pnpm changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
+    "@eslint/js": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.0.0",
+    "eslint-plugin-vue": "^9.25.0",
+    "globals": "^15.0.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "rimraf": "^5.0.5",
-    "standard-version": "^9.5.0"
+    "standard-version": "^9.5.0",
+    "typescript-eslint": "^7.7.0",
+    "vue-eslint-parser": "^9.4.2"
   },
   "packageManager": "pnpm@8.6.10",
   "keywords": [],
@@ -47,19 +52,6 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
-    ]
-  },
-  "standard-version": {
-    "scripts": {
-      "prerelease": "echo buliding...",
-      "posttag": "git push --follow-tags origin main && npm publish --access=public"
-    },
-    "types": [
-      {
-        "type": "chore",
-        "section": "Other",
-        "hidden": false
-      }
     ]
   }
 }

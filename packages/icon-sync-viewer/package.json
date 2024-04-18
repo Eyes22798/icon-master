@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && tsc index.ts --outDir dist"
+  },
   "publishConfig": {
     "access": "public"
   }
