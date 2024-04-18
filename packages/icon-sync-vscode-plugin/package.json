@@ -1,12 +1,12 @@
 {
-  "name": "@helox/icon-sync-vscode-plugin",
-  "version": "0.0.0",
-  "private": true,
-  "license": "MIT",
-  "scripts": {
-    "build": "rimraf dist && tsc index.ts --outDir dist"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@heloxmo/icon-sync-vscode-plugin",
+	"version": "0.0.0",
+	"private": true,
+	"license": "MIT",
+	"scripts": {
+		"build": "rimraf dist && tsc index.ts --outDir dist"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
