@@ -10,8 +10,6 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "pnpm -r --filter=./packages/* run build",
-		"prettier": "prettier --check ./",
-		"prettier:fix": "prettier --write ./",
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "pnpm run lint --fix",
 		"prepare": "husky",
@@ -55,6 +53,52 @@
 	"commitlint": {
 		"extends": [
 			"@commitlint/config-conventional"
+		],
+		"types": [
+			{
+				"value": "feat",
+				"emoji": ":sparkles:"
+			},
+			{
+				"value": "fix",
+				"emoji": ":bug:"
+			},
+			{
+				"value": "docs",
+				"emoji": ":memo:"
+			},
+			{
+				"value": "style",
+				"emoji": ":lipstick:"
+			},
+			{
+				"value": "refactor",
+				"emoji": ":recycle:"
+			},
+			{
+				"value": "perf",
+				"emoji": ":zap:"
+			},
+			{
+				"value": "test",
+				"emoji": ":white_check_mark:"
+			},
+			{
+				"value": "build",
+				"emoji": ":package:"
+			},
+			{
+				"value": "ci",
+				"emoji": ":ferris_wheel:"
+			},
+			{
+				"value": "revert",
+				"emoji": ":rewind:"
+			},
+			{
+				"value": "chore",
+				"emoji": ":hammer:"
+			}
 		]
 	}
 }
