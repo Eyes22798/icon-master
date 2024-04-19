@@ -1,0 +1,11 @@
+{
+	"mode": "exit",
+	"tag": "alpha",
+	"initialVersions": {
+		"@heloxmo/icon-sync-server": "0.0.0",
+		"@heloxmo/icon-sync-viewer": "0.0.0",
+		"@heloxmo/icon-sync-vscode-plugin": "0.0.0",
+		"@heloxmo/svg-icon": "0.0.0"
+	},
+	"changesets": ["tough-drinks-taste"]
+}
