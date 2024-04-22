@@ -16,9 +16,11 @@
 		"lint:fix": "pnpm run lint --fix",
 		"prepare": "husky",
 		"commit": "git pull && git add -A && git-cz && git push",
-		"changeset": "changeset",
-		"version-packages": "changeset version",
-		"publish": "pnpm build && pnpm changeset publish"
+		"changeset:add": "changeset",
+		"changeset:enter": "pnpm changeset pre enter",
+		"changeset:version": "changeset version",
+		"changeset:publish": "pnpm changeset publish",
+		"release": "pnpm build && pnpm changeset:add && pnpm changeset:version && pnpm changeset:publish"
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.27.1",
